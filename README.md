@@ -232,3 +232,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-03-19T00:00:00.000Z fix: force authentication
 2023-03-19T00:00:00.000Z fix: update UI components
 2023-03-19T00:00:00.000Z fix: refactor database schema
+2023-03-19T00:00:00.000Z fix: fix authentication
