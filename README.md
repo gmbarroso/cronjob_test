@@ -249,3 +249,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-03-20T00:00:00.000Z chore: fix integration tests
 2023-03-21T00:00:00.000Z feature: force UI components
 2023-03-21T00:00:00.000Z chore: refactor documentation
+2023-03-21T00:00:00.000Z fix: refactor unit tests
