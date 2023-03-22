@@ -60,3 +60,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-03-21T00:00:00.000Z chore: fix dependencies
 2023-03-22T00:00:00.000Z feature: force authentication
 2023-03-22T00:00:00.000Z feature: force REST api calls
+2023-03-22T00:00:00.000Z fix: fix configuration files
