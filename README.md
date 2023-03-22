@@ -64,3 +64,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-03-22T00:00:00.000Z chore: add performance improvements
 2023-03-22T00:00:00.000Z chore: fix database schema
 2023-03-22T00:00:00.000Z chore: refactor UI components
+2023-03-22T00:00:00.000Z feature: force dependencies
