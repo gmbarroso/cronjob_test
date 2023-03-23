@@ -69,3 +69,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-03-22T00:00:00.000Z fix: fix logging
 2023-03-23T00:00:00.000Z chore: update dependencies
 2023-03-23T00:00:00.000Z chore: refactor authentication
+2023-03-23T00:00:00.000Z fix: force configuration files
