@@ -268,3 +268,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-03-24T00:00:00.000Z chore: refactor integration tests
 2023-03-24T00:00:00.000Z chore: fix performance improvements
 2023-03-24T00:00:00.000Z fix: fix database schema
+2023-03-24T00:00:00.000Z feature: add unit tests
