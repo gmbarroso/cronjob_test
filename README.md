@@ -90,3 +90,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-03-27T00:00:00.000Z feature: fix deployment scripts
 2023-03-27T00:00:00.000Z fix: force authentication
 2023-03-27T00:00:00.000Z feature: force security patches
+2023-03-27T00:00:00.000Z feature: add dependencies
