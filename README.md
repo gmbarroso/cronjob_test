@@ -289,3 +289,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-03-27T00:00:00.000Z fix: update unit tests
 2023-03-27T00:00:00.000Z feature: update documentation
 2023-03-27T00:00:00.000Z chore: add documentation
+2023-03-27T00:00:00.000Z feature: fix dependencies
