@@ -302,3 +302,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-03-28T00:00:00.000Z fix: refactor documentation
 2023-03-28T00:00:00.000Z chore: fix authentication
 2023-03-28T00:00:00.000Z fix: refactor database schema
+2023-03-28T00:00:00.000Z chore: force documentation
