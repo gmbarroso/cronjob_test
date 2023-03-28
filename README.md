@@ -294,3 +294,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-03-27T00:00:00.000Z fix: refactor UI components
 2023-03-27T00:00:00.000Z feature: add performance improvements
 2023-03-28T00:00:00.000Z feature: add database schema
+2023-03-28T00:00:00.000Z feature: refactor REST api calls
