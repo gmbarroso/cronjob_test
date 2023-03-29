@@ -102,3 +102,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-03-29T00:00:00.000Z fix: fix error handling
 2023-03-29T00:00:00.000Z feature: update configuration files
 2023-03-29T00:00:00.000Z feature: add dependencies
+2023-03-29T00:00:00.000Z fix: add performance improvements
