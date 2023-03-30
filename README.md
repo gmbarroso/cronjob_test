@@ -106,3 +106,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-03-29T00:00:00.000Z fix: update database schema
 2023-03-29T00:00:00.000Z chore: refactor documentation
 2023-03-29T00:00:00.000Z feature: add deployment scripts
+2023-03-30T00:00:00.000Z fix: fix performance improvements
