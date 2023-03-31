@@ -311,3 +311,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-03-30T00:00:00.000Z feature: refactor performance improvements
 2023-03-30T00:00:00.000Z chore: force error handling
 2023-03-31T00:00:00.000Z fix: update logging
+2023-03-31T00:00:00.000Z chore: add code cleanup
