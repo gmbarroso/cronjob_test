@@ -315,3 +315,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-03-31T00:00:00.000Z fix: fix security patches
 2023-03-31T00:00:00.000Z fix: refactor authentication
 2023-04-01T00:00:00.000Z feature: add configuration files
+2023-04-01T00:00:00.000Z fix: update authentication
