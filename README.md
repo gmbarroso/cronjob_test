@@ -124,3 +124,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-04-02T00:00:00.000Z feature: refactor REST api calls
 2023-04-02T00:00:00.000Z feature: add dependencies
 2023-04-02T00:00:00.000Z fix: refactor deployment scripts
+2023-04-02T00:00:00.000Z fix: refactor dependencies
