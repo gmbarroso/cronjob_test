@@ -327,3 +327,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-04-02T00:00:00.000Z chore: force performance improvements
 2023-04-02T00:00:00.000Z fix: add documentation
 2023-04-02T00:00:00.000Z feature: force UI components
+2023-04-02T00:00:00.000Z feature: force performance improvements
