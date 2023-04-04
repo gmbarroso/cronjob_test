@@ -343,3 +343,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-04-04T00:00:00.000Z feature: update performance improvements
 2023-04-04T00:00:00.000Z fix: update configuration files
 2023-04-04T00:00:00.000Z feature: force unit tests
+2023-04-04T00:00:00.000Z feature: fix REST api calls
