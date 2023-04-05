@@ -350,3 +350,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-04-04T00:00:00.000Z fix: refactor error handling
 2023-04-05T00:00:00.000Z feature: add authentication
 2023-04-05T00:00:00.000Z chore: force error handling
+2023-04-05T00:00:00.000Z feature: fix logging
