@@ -146,3 +146,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-04-06T00:00:00.000Z fix: force unit tests
 2023-04-06T00:00:00.000Z fix: fix logging
 2023-04-06T00:00:00.000Z chore: force unit tests
+2023-04-06T00:00:00.000Z feature: add error handling
