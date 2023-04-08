@@ -157,3 +157,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-04-08T00:00:00.000Z fix: refactor logging
 2023-04-08T00:00:00.000Z chore: add deployment scripts
 2023-04-08T00:00:00.000Z chore: refactor performance improvements
+2023-04-08T00:00:00.000Z fix: refactor authentication
