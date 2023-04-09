@@ -161,3 +161,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-04-09T00:00:00.000Z feature: update database schema
 2023-04-09T00:00:00.000Z fix: add error handling
 2023-04-09T00:00:00.000Z fix: fix configuration files
+2023-04-09T00:00:00.000Z chore: add integration tests
