@@ -168,3 +168,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-04-09T00:00:00.000Z chore: refactor code cleanup
 2023-04-09T00:00:00.000Z chore: force REST api calls
 2023-04-10T00:00:00.000Z chore: add unit tests
+2023-04-10T00:00:00.000Z fix: add deployment scripts
