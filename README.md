@@ -375,3 +375,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-04-10T00:00:00.000Z fix: update security patches
 2023-04-11T00:00:00.000Z fix: refactor performance improvements
 2023-04-11T00:00:00.000Z chore: refactor error handling
+2023-04-11T00:00:00.000Z fix: refactor documentation
