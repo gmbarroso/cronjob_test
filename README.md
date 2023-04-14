@@ -202,3 +202,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-04-13T00:00:00.000Z fix: force error handling
 2023-04-14T00:00:00.000Z fix: fix deployment scripts
 2023-04-14T00:00:00.000Z chore: force logging
+2023-04-14T00:00:00.000Z feature: force logging
