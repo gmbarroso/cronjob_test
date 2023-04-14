@@ -402,3 +402,4 @@ This project is licensed under the MIT License.2023-03-18T00:00:00.000Z chore: f
 2023-04-14T00:00:00.000Z chore: fix code cleanup
 2023-04-14T00:00:00.000Z chore: force performance improvements
 2023-04-14T00:00:00.000Z feature: fix UI components
+2023-04-14T00:00:00.000Z fix: force UI components
