@@ -32,17 +32,15 @@ async function mergeAndResetCounter() {
 
     await git.mergeFromTo('development', 'main', ['--no-commit']);
 
+    fs.writeFileSync('counter.json', JSON.stringify({ count: 0 }));
+    await git.add('counter.json');
+    await git.commit('Reset counter after merge');
+
     const date = new Date().toISOString().split('T')[0];
     await git.commit(`Merged development into main on ${date}`);
 
     console.log('Merged development into main.');
 
-    const commitCounter = { count: 0 };
-    fs.writeFileSync('counter.json', JSON.stringify(commitCounter));
-    console.log('Counter reset.');
-
-    await git.add('counter.json');
-    await git.commit('Reset counter after merge');
     await git.push('origin', 'main');
     console.log('Counter reset commit pushed to main.');
 
