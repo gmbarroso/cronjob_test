@@ -25,6 +25,9 @@ async function mergeAndResetCounter() {
   try {
     await git.checkout('main');
     await git.fetch();
+
+    await git.stash();
+
     await git.rebase(['origin/main']);
 
     await git.mergeFromTo('development', 'main', ['--no-commit']);
@@ -42,6 +45,8 @@ async function mergeAndResetCounter() {
     await git.commit('Reset counter after merge');
     await git.push('origin', 'main');
     console.log('Counter reset commit pushed to main.');
+
+    await git.stash(['pop']);
   } catch (err) {
     console.error('Error during merge and reset:', err);
   }
