@@ -49,7 +49,7 @@ async function mergeAndResetCounter() {
   }
 }
 
-cron.schedule('* * * * * *', () => {
+cron.schedule('0 */2 * * *', () => {
   console.log('Running cronjob...');
   doCommit();
 });
