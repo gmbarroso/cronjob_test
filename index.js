@@ -5,16 +5,16 @@ const git = simpleGit();
 
 async function doCommit() {
   try {
-    const data = fs.readFileSync('contador.json');
-    const contador = JSON.parse(data);
-    contador.count += 1;
+    const data = fs.readFileSync('counter.json');
+    const counter = JSON.parse(data);
+    counter.count += 1;
 
-    fs.writeFileSync('contador.json', JSON.stringify(contador));
+    fs.writeFileSync('counter.json', JSON.stringify(counter));
 
     await git.add('./*');
-    await git.commit(`Automatic commit #${contador.count}`);
+    await git.commit(`Automatic commit #${counter.count}`);
     await git.push('origin', 'development');
-    console.log(`Commit #${contador.count} done successfully!`);
+    console.log(`Commit #${counter.count} done successfully!`);
   } catch (err) {
     console.error('Error making commit:', err);
   }
@@ -33,11 +33,11 @@ async function mergeAndResetCounter() {
 
     console.log('Merged development into main.');
 
-    const contador = { count: 0 };
-    fs.writeFileSync('contador.json', JSON.stringify(contador));
+    const counter = { count: 0 };
+    fs.writeFileSync('counter.json', JSON.stringify(counter));
     console.log('Counter reset.');
 
-    await git.add('contador.json');
+    await git.add('counter.json');
     await git.commit('Reset counter after merge');
     await git.push('origin', 'main');
     console.log('Counter reset commit pushed to main.');
@@ -59,6 +59,6 @@ cron.schedule('0 0 * * *', () => {
 console.log('Cronjob scheduled.');
 
 module.exports = {
-    doCommit,
-    mergeAndResetCounter
+  doCommit,
+  mergeAndResetCounter
 };
