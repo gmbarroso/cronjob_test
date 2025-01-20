@@ -6,16 +6,16 @@ const git = simpleGit();
 async function doCommit() {
   try {
     const data = fs.readFileSync('counter.json');
-    const counter = JSON.parse(data);
-    counter.count += 1;
+    const commitCounter = JSON.parse(data);
+    commitCounter.count += 1;
 
-    fs.writeFileSync('counter.json', JSON.stringify(counter));
+    fs.writeFileSync('counter.json', JSON.stringify(commitCounter));
 
     const date = new Date().toISOString().split('T')[0];
     await git.add('./*');
-    await git.commit(`Automatic commit #${counter.count} on ${date}`);
+    await git.commit(`Automatic commit #${commitCounter.count} on ${date}`);
     await git.push('origin', 'development');
-    console.log(`Commit #${counter.count} on ${date} done successfully!`);
+    console.log(`Commit #${commitCounter.count} on ${date} done successfully!`);
   } catch (err) {
     console.error('Error making commit:', err);
   }
@@ -37,8 +37,8 @@ async function mergeAndResetCounter() {
 
     console.log('Merged development into main.');
 
-    const counter = { count: 0 };
-    fs.writeFileSync('counter.json', JSON.stringify(counter));
+    const commitCounter = { count: 0 };
+    fs.writeFileSync('counter.json', JSON.stringify(commitCounter));
     console.log('Counter reset.');
 
     await git.add('counter.json');
