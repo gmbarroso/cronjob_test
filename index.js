@@ -23,7 +23,14 @@ async function doCommit() {
 async function mergeAndResetCounter() {
   try {
     await git.checkout('main');
-    await git.mergeFromTo('development', 'main');
+    await git.fetch();
+    await git.rebase(['origin/main']);
+
+    await git.mergeFromTo('development', 'main', ['--no-commit']);
+
+    const date = new Date().toISOString().split('T')[0];
+    await git.commit(`Merged development into main on ${date}`);
+
     console.log('Merged development into main.');
 
     const contador = { count: 0 };
@@ -39,7 +46,7 @@ async function mergeAndResetCounter() {
   }
 }
 
-cron.schedule('* * * * * *', () => {
+cron.schedule('0 */2 * * *', () => {
   console.log('Running cronjob...');
   doCommit();
 });
@@ -50,3 +57,8 @@ cron.schedule('0 0 * * *', () => {
 });
 
 console.log('Cronjob scheduled.');
+
+module.exports = {
+    doCommit,
+    mergeAndResetCounter
+};
