@@ -47,13 +47,11 @@ async function mergeAndResetCounter() {
   }
 }
 
-// Schedule the commit job to run every two hours
-cron.schedule('0 */2 * * *', () => {
+cron.schedule('* * * * * *', () => {
   console.log('Running cronjob...');
   doCommit();
 });
 
-// Schedule the merge and reset job to run once a day at midnight
 cron.schedule('0 0 * * *', () => {
   console.log('Running merge and reset job...');
   mergeAndResetCounter();
@@ -61,7 +59,6 @@ cron.schedule('0 0 * * *', () => {
 
 console.log('Cronjob scheduled.');
 
-// Export the functions for manual execution
 module.exports = {
   doCommit,
   mergeAndResetCounter
