@@ -1,25 +1,6 @@
-const cron = require('node-cron');
 const simpleGit = require('simple-git');
 const fs = require('fs');
 const git = simpleGit();
-
-async function doCommit() {
-  try {
-    const data = fs.readFileSync('counter.json');
-    const commitCounter = JSON.parse(data);
-    commitCounter.count += 1;
-
-    fs.writeFileSync('counter.json', JSON.stringify(commitCounter));
-
-    const date = new Date().toISOString().split('T')[0];
-    await git.add('./*');
-    await git.commit(`Automatic commit #${commitCounter.count} on ${date}`);
-    await git.push('origin', 'development');
-    console.log(`Commit #${commitCounter.count} on ${date} done successfully!`);
-  } catch (err) {
-    console.error('Error making commit:', err);
-  }
-}
 
 async function mergeAndResetCounter() {
   try {
@@ -99,14 +80,9 @@ async function generatePastCommits() {
   console.log('Past commits pushed to main.');
 }
 
-// Schedule the commit job to run every two hours
-cron.schedule('* * * * * *', () => {
-  console.log('Running cronjob...');
-  doCommit();
-});
-
 // Schedule the merge and reset job to run once a day at midnight
-cron.schedule('0 0 * * *', () => {
+const cron = require('node-cron');
+cron.schedule('* * * * * *', () => {
   console.log('Running merge and reset job...');
   mergeAndResetCounter();
 });
@@ -115,7 +91,6 @@ console.log('Cronjob scheduled.');
 
 // Export the functions for manual execution
 module.exports = {
-  doCommit,
   mergeAndResetCounter,
   generatePastCommits
 };
