@@ -49,11 +49,63 @@ async function mergeAndResetCounter() {
   }
 }
 
+function formatISODate(date) {
+  return date.toISOString();
+}
+
+function getRandomElement(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function generateCommitMessage() {
+  const types = ['feature', 'fix', 'chore'];
+  const verbs = ['add', 'update', 'force', 'fix', 'refactor'];
+  const subjects = [
+    'REST api calls', 'authentication', 'database schema', 'UI components', 'error handling',
+    'unit tests', 'integration tests', 'performance improvements', 'documentation', 'logging',
+    'configuration files', 'deployment scripts', 'security patches', 'code cleanup', 'dependencies',
+    'API endpoints', 'user authentication', 'data validation', 'error logging', 'session management',
+    'input sanitization', 'output formatting', 'code optimization', 'memory management', 'threading issues'
+  ];
+
+  const type = getRandomElement(types);
+  const verb = getRandomElement(verbs);
+  const subject = getRandomElement(subjects);
+
+  return `${type}: ${verb} ${subject}`;
+}
+
+async function generatePastCommits() {
+  const startDate = new Date('2023-03-01');
+  const endDate = new Date('2023-04-01');
+  let currentDate = new Date(startDate);
+
+  while (currentDate <= endDate) {
+    const isoDate = formatISODate(currentDate);
+    const randomCommits = Math.floor(Math.random() * 10) + 1;
+
+    for (let i = 1; i <= randomCommits; i++) {
+      const commitMessage = generateCommitMessage();
+      fs.appendFileSync('README.md', `${isoDate} ${commitMessage}\n`);
+      await git.add('./*');
+      await git.commit(commitMessage, { '--date': isoDate });
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Sleep for 1 second
+    }
+
+    currentDate.setDate(currentDate.getDate() + 1);
+  }
+
+  await git.push('origin', 'main');
+  console.log('Past commits pushed to main.');
+}
+
+// Schedule the commit job to run every two hours
 cron.schedule('* * * * * *', () => {
   console.log('Running cronjob...');
   doCommit();
 });
 
+// Schedule the merge and reset job to run once a day at midnight
 cron.schedule('0 0 * * *', () => {
   console.log('Running merge and reset job...');
   mergeAndResetCounter();
@@ -61,7 +113,9 @@ cron.schedule('0 0 * * *', () => {
 
 console.log('Cronjob scheduled.');
 
+// Export the functions for manual execution
 module.exports = {
   doCommit,
-  mergeAndResetCounter
+  mergeAndResetCounter,
+  generatePastCommits
 };
